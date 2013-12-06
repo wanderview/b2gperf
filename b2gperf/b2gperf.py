@@ -91,7 +91,7 @@ class DatazillaPerfPoster(object):
             self.logger.debug('Getting gaia, gecko and build revisions')
             try:
                 app_zip = self.device.manager.pullFile(
-                    '/data/local/webapps/settings.gaiamobile.org/'
+                    '/system/b2g/webapps/settings.gaiamobile.org/'
                     'application.zip')
                 zip_file = zipfile.ZipFile(StringIO(app_zip))
                 with zip_file.open('resources/gaia_commit.txt') as f:
